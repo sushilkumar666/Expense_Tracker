@@ -6,7 +6,7 @@ export default function ExpenseTracker() {
      <p>
     <h2> Expense Items </h2>
 
-Food Rs 10 <br></br>
+Food ₹ 10 <br></br>
 
 Petrol Rs 100 <br> </br>
 
