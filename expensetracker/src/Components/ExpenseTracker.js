@@ -8,7 +8,7 @@ export default function ExpenseTracker() {
 
 Food Rs 10 <br></br>
 
-Petrol Rs 100 <br></br>
+Petrol Rs 100 <br> </br>
 
 Movies Rs 200
 
