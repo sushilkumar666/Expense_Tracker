@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import ExpenseTracker from './Components/ExpenseTracker'
+import ExpenseItem from './Components/ExpenseItem'
 
 function App() {
   let data = [
@@ -355,7 +355,7 @@ function App() {
 
 
       {data.map((element) => (
-        <ExpenseTracker title={element.title} date={element.date} location={element.location} amount={element.amount}></ExpenseTracker >
+        <ExpenseItem title={element.title} date={element.date} location={element.location} amount={element.amount}></ExpenseItem >
       ))}
 
 
