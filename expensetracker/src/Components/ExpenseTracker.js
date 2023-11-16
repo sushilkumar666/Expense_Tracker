@@ -1,19 +1,19 @@
 import React from 'react'
-
-export default function ExpenseTracker() {
+import './ExpenseTracker.css'
+function ExpenseItem(props) {
   return (
-    <>    <h1>ExpenseTracker</h1>
-     <p>
-    <h2> Expense Items </h2>
+    <div className="expense-item">
+      <div>{props.date.toLocaleString()}</div>
 
-Food ₹ 10 <br></br>
+      <div className="expense-item__description">
+        <h2>{props.title}</h2>
+        <h2 className='locationOfExpenditure'>{props.location}</h2>
 
-Petrol Rs 100 <br> </br>
 
-Movies Rs 200
-
-     </p>
-    </>
-
-  )
+        <div className="expense-item__price">Rs {props.amount}</div>
+      </div>
+    </div>
+  );
 }
+
+export default ExpenseItem;
