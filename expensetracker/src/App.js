@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import ExpenseItem from './Components/ExpenseItem'
+import ExpenseItem from './Components/Expenses/ExpenseItem'
 
 function App() {
   let data = [
