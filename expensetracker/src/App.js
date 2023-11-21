@@ -1,5 +1,7 @@
 import logo from './logo.svg';
-import ExpenseItem from './Components/Expenses/ExpenseItem'
+import ExpenseItem from './Components/ExpenseItem'
+import ExpenseForm from './Components/ExpenseForm';
+
 
 function App() {
   let data = [
@@ -352,6 +354,7 @@ function App() {
 
     <>
       <h1>Let's get started</h1>
+      <ExpenseForm></ExpenseForm>
 
 
       {data.map((element) => (
