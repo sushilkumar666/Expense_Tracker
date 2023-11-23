@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './ExpensesFilter.css';
+import './ExpenseFilter.css';
 
 const ExpensesFilter = () => {
     return (
@@ -19,3 +19,4 @@ const ExpensesFilter = () => {
 };
 
 export default ExpensesFilter;
+
