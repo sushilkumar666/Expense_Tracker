@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 import './ExpenseForm.css';
+// import './ExpenseDetail.css';
+import './ExpenseItem.css'
+
 
 const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('');
@@ -55,7 +58,7 @@ const ExpenseForm = (props) => {
     };
 
     return (
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className='expense-item__price'>
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
@@ -86,8 +89,8 @@ const ExpenseForm = (props) => {
                     />
                 </div>
             </div>
-            <div className='new-expense__actions'>
-                <button type='submit'>Add Expense</button>
+            <div className='new-expense__actions  ' >
+                <button className='expense-item__price' type='submit'>Add Expense</button>
             </div>
         </form>
     );
