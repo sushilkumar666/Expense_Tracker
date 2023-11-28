@@ -110,7 +110,7 @@ function App(props) {
       <h1>Let's get started</h1>
       <NewExpense className='expense-item__description' onAddExpense={addExpenseHandler} />
       <ExpenseFilter onChangeFilter={updatedYear} />
-      {/* <ExpensesChart Expenses={filteredExpenses} ></ExpensesChart> */}
+      <ExpensesChart Expenses={filteredExpenses} ></ExpensesChart>
       {/* {filteredExpenses.length > 0 ? 'sushil' : 'sushilwa'} */}
       {filteredExpenses.length > 0 ? filteredExpenses.map((element) => (
         <ExpenseItem title={element.title} date={element.date} location={element.location} amount={element.amount}></ExpenseItem >
