@@ -9,6 +9,7 @@ const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enteredDate, setEnteredDate] = useState('');
+    const [enteredLocation, setEnteredLocation] = useState('');
     // const [userInput, setUserInput] = useState({
     //   enteredTitle: '',
     //   enteredAmount: '',
@@ -42,19 +43,26 @@ const ExpenseForm = (props) => {
         // });
     };
 
+    const locationChangeHandler = (event) => {
+        setEnteredLocation(event.target.value);
+    }
+
     const submitHandler = (event) => {
         event.preventDefault();
 
         const expenseData = {
             title: enteredTitle,
             amount: enteredAmount,
+            location: enteredLocation,
             date: new Date(enteredDate),
         };
 
         props.onSaveExpenseData(expenseData);
+        console.log(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
+        setEnteredLocation('');
     };
 
     return (
@@ -72,10 +80,18 @@ const ExpenseForm = (props) => {
                     <label>Amount</label>
                     <input
                         type='number'
-                        min='0.01'
-                        step='0.01'
+
                         value={enteredAmount}
                         onChange={amountChangeHandler}
+                    />
+                </div>
+                <div className='new-expense__control'>
+                    <label>Location</label>
+                    <input
+                        type='text'
+
+                        value={enteredLocation}
+                        onChange={locationChangeHandler}
                     />
                 </div>
                 <div className='new-expense__control'>
@@ -83,7 +99,7 @@ const ExpenseForm = (props) => {
                     <input
                         type='date'
                         min='2019-01-01'
-                        max='2022-12-31'
+                        max='2023-12-31'
                         value={enteredDate}
                         onChange={dateChangeHandler}
                     />

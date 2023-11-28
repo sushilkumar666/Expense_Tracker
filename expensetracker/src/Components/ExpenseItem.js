@@ -16,7 +16,7 @@ function ExpenseItem(props) {
       <div className='expense-item'>
         <ExpenseDate date={props.date} />
         <div className='expense-item__description '>
-          <ExpenseDetail amount={amount} location={props.location} title={props.title} />
+          <ExpenseDetail amount={props.amount} location={props.location} title={props.title} />
         </div>
         <button style={{ backgroundColor: 'white', cursor: 'pointer', padding: '10px', borderRadius: '10px', marginLeft: '5px' }} onClick={clickMe}>Click Me</button>
       </div>
